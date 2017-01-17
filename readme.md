@@ -1,7 +1,8 @@
 #Introduction
-This is a script that collects sensor information from ipmitool on an HP 380 G6, formats it and then inserts it into an influxdb database named "ipmi".
+This is a script that collects sensor information from ipmitool on an HP 380 G6 running Proxmox, formats it, and then inserts it into an influxdb database named "ipmi".
 
 #Requirements 
+1. Linux OS (in this case proxmox using debian)
 1. ipmitool 
 1. freeipmi
 1. loaded modules
