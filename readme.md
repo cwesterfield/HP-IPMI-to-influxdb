@@ -18,6 +18,7 @@ modprobe ipmi_watchdog
 ```
 
 You must also have a database named ipmi created on the influxdb machine. 
+
 `cwesterfield@influxdb~/# influx -execute 'create database ipmi'`
 
 #My environment
