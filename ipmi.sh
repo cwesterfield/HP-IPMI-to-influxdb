@@ -28,7 +28,7 @@ for i in $SENSOR_RAW
 #Temps
 for j in $SENSOR_RAW
  do
-  cat $j | grep "Temp " | grep -v na  | awk -F "|" {'print "temp,host=hp_380_g6,temp="$1,"DegInC=",$2'} | tr -s '[:space:]' | sed 's/Temp /Temp\\ /g ; s/InC= /InC=/g; s/\<[0-9]\>/0&/' >> $SENSOR_IMP
+  cat $j | grep "Temp " | awk -F "|" {'print "temp,host=hp_380_g6,temp="$1,"DegInC=",$2'} | tr -s '[:space:]' | sed 's/Temp /Temp\\ /g ; s/InC= /InC=/g; s/\<[0-9]\>/0&/' | grep -v na >> $SENSOR_IMP
  done
 
 #Power
